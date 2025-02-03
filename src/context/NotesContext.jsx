@@ -15,7 +15,7 @@ export const NotesProvider = ({ children }) => {
   const fetchNotes = async () => {
     setLoading(true);
     try {
-      const response = await fetch('hhttps://notes-app-backend-nu9n.onrender.com/api/notes', {
+      const response = await fetch('https://notes-app-backend-nu9n.onrender.com/api/notes', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -37,7 +37,7 @@ export const NotesProvider = ({ children }) => {
   const addNote = async (note) => {
     setLoading(true);
     try {
-      const response = await fetch('hhttps://notes-app-backend-nu9n.onrender.com/api/notes', {
+      const response = await fetch('https://notes-app-backend-nu9n.onrender.com/api/notes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export const NotesProvider = ({ children }) => {
   // Delete note
   const deleteNote = async (id) => {
     try {
-      const response = await fetch(`hhttps://notes-app-backend-nu9n.onrender.com/api/notes/${id}`, {
+      const response = await fetch(`https://notes-app-backend-nu9n.onrender.com/api/notes/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -85,7 +85,7 @@ export const NotesProvider = ({ children }) => {
   const updateNote = async (id, updatedNote) => {
     setLoading(true);
     try {
-      const response = await fetch(`hhttps://notes-app-backend-nu9n.onrender.com/api/notes/${id}`, {
+      const response = await fetch(`https://notes-app-backend-nu9n.onrender.com/api/notes/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
