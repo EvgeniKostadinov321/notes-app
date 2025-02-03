@@ -62,6 +62,15 @@ MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 ```
 
+## Security Note
+This is a demonstration project for interview purposes. In a production environment:
+- JWT_SECRET should be a strong, randomly generated string
+- Environment variables should never be committed to version control
+- Database credentials should be properly secured
+- CORS settings should be properly configured
+- Rate limiting should be implemented
+- Input validation should be more strict
+
 ## Project Structure
 
 ```

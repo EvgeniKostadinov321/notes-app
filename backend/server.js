@@ -13,7 +13,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174','http://localhost:5175','http://localhost:5176'], // Updated CORS configuration
+  origin: [
+    'http://localhost:5173', 
+    'https://your-netlify-app.netlify.app'  // Add your Netlify URL here
+  ],
   credentials: true
 }));
 app.use(express.json());
@@ -21,6 +24,11 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/notes', noteRoutes);
+
+// Add this for Render.com
+app.get('/', (req, res) => {
+  res.send('Notes API is running');
+});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
