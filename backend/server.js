@@ -17,7 +17,7 @@ app.use(cors({
     'http://localhost:5173', 
     'http://localhost:5174', 
     'http://localhost:5175', 
-    'darling-sable-662f61.netlify.app'  // Add your Netlify URL here
+    'https://darling-sable-662f61.netlify.app'  // Add your Netlify URL here
   ],
   credentials: true
 }));
