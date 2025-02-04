@@ -13,7 +13,9 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://darling-sable-662f61.netlify.app/'], // Updated CORS configuration
+  origin: ['http://localhost:5173', 'https://darling-sable-662f61.netlify.app'
+                                    
+  ], // Updated CORS configuration
   credentials: true
 }));
 app.use(express.json());
